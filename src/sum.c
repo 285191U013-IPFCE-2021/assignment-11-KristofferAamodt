@@ -18,12 +18,34 @@ int sum (int n)
 /* Sum integers 1 to n */
 int sumtail (int n, int total)
 {
-    return 0;
+  //Pre-contidion
+  assert(n>=1);
+  assert(total>=0);
+
+  //Post-condition
+  if(n==1)
+    return 1+total;
+  else
+  { 
+    total = total + 1;
+    n = n - 1; 
+    return sumtail(n,total);
+  }
+
 }
 
 /* Sum integers 1 to n */
 int sumwhile (int n)
 {
-  return 0;
+  //Pre-condition
+  assert(n>=1);
+
+  //Post-condition
+  int sum =0;
+  for(int i = 1; i<=n; i++)
+    sum++;
+
+  return sum;
+
 }
 
